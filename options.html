@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LiTheme</title>
+    <style>
+      #options {
+        font-family: Arial, sans-serif;
+        display:flex;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      select,
+      button {
+        font-size: 14px;
+        width: 150px;
+        height: 30px;
+      }
+
+      #status {
+        font-family: Arial, sans-serif;
+        position: absolute;
+        top: 0;
+        display:flex;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+      }
+
+      #save {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        top: 19px;
+      }
+
+      #save:hover {
+        background-color: #45a049;
+      }
+
+      /* Remove the background on the div */
+      #status {
+        background-color: transparent;
+        position: relative;
+        top: 30px;
+
+      }
+
+      .piece {
+        width: 75px;
+        height: 75px;
+        background-repeat: no-repeat;
+        position: absolute;
+        background-size:contain;
+      }
+
+      #wn {
+        top: 622px;
+        left: 568px;
+      }
+
+      #wn2 {
+        top: 622px;
+        left: 944px;
+      }
+
+      #wr {
+        top: 622px;
+        left: 492px;
+      }
+      
+      #wr2 {
+        top: 622px;
+        left: 1018px;
+    }
+
+    #wb {
+        top: 622px;
+        left: 643px;
+    }
+
+    #wq {
+        top: 622px;
+        left: 717px;
+    }
+
+    #wk {
+        top: 622px;
+        left: 792px;
+    }
+
+    #wb2 {
+        top: 622px;
+        left: 868px;
+    }
+
+    #wp1 {
+        top: 547px;
+        left: 492px;
+    }
+
+    #wp2 {
+        top: 547px;
+        left: 568px;
+    }
+
+    #wp3 {
+        top: 547px;
+        left: 643px;
+    }
+
+    #wp4 {
+        top: 547px;
+        left: 717px;
+    }
+
+    #wp5 {
+        top: 547px;
+        left: 792px;
+    }
+
+    #wp6 {
+        top: 547px;
+        left: 868px;
+    }
+
+    #wp7 {
+        top: 547px;
+        left: 944px;
+    }
+
+    #wp8 {
+        top: 547px;
+        left: 1018px;
+    }
+
+    #bn {
+        top: 96px;
+        left: 568px;
+    }
+
+    #bn2 {
+        top: 96px;
+        left: 944px;
+    }
+
+    #br {
+        top: 96px;
+        left: 492px;
+    }
+
+    #br2 {
+        top: 96px;
+        left: 1018px;
+    }
+
+    #bb {
+        top: 96px;
+        left: 643px;
+    }
+
+    #bq {
+        top: 96px;
+        left: 717px;
+    }
+
+    #bk {
+        top: 96px;
+        left: 792px;
+    }
+
+    #bb2 {
+        top: 96px;
+        left: 868px;
+    }
+
+    #bp1 {
+        top: 171px;
+        left: 492px;
+    }
+
+    #bp2 {
+        top: 171px;
+        left: 568px;
+    }
+
+    #bp3 {
+        top: 171px;
+        left: 643px;
+    }
+
+    #bp4 {
+        top: 171px;
+        left: 717px;
+    }
+
+    #bp5 {
+        top: 171px;
+        left: 792px;
+    }
+
+    #bp6 {
+        top: 171px;
+        left: 868px;
+    }
+
+    #bp7 {
+        top: 171px;
+        left: 944px;
+    }
+
+    #bp8 {
+        top: 171px;
+        left: 1018px;
+    }
+
+      #board {
+        width: 600px;
+        height: 600px;
+        background-repeat: no-repeat;
+        position: absolute;
+        background-size:contain;
+
+        top: 100px
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="status"></div>
+    <div id="options">
+        <div>
+        <label for="pieceTheme">Piece theme:</label>
+        <select id="pieceTheme">
+            <option value="none">None</option>
+            <option value="cburnett">Burnett</option>
+            <option value="merida">Merida</option>
+            <option value="alpha">Alpha</option>
+            <option value="pirouetti">Pirouetti</option>
+            <option value="chessnut">Chessnut</option>
+            <option value="chess7">Chess 7</option>
+            <option value="reillycraig">Reilly Craig</option>
+            <option value="companion">Companion</option>
+            <option value="riohacha">Riohacha</option>
+            <option value="kosal">Kosal</option>
+            <option value="leipzig">Leipzig</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="spatial">Spatial</option>
+            <option value="celtic">Celtic</option>
+            <option value="california">California</option>
+            <option value="pixel">Pixel</option>
+            <option value="maestro">Maestro</option>
+            <option value="fresca">Fresca</option>
+            <option value="cardinal">Cardinal</option>
+            <option value="gioco">Gioco</option>
+            <option value="tatiana">Tatiana</option>
+            <option value="staunty">Staunty</option>
+            <option value="governor">Governor</option>
+            <option value="dubrovny">Dubrovny</option>
+            <option value="icpieces">IC pieces</option>
+            <option value="mpchess">MP chess</option>
+            <option value="kiwen-suwi">Kiwen Suwi</option>
+            <option value="horsey">Horsey</option>
+            <option value="anarcandy">Anarcandy</option>
+            <option value="shapes">Shapes</option>
+            <option value="letter">Letter</option>
+            <option value="disguised">Disguised</option>
+        </select>
+        </div>
+
+        <div>
+        <label for="boardTheme">Board theme:</label>
+        <select id="boardTheme">
+            <option value="none">None</option>
+            <option value="blue">Blue</option>
+            <option value="blue2">Blue 2</option>
+            <option value="blue3">Blue 3</option>
+            <option value="blue-marble">Blue marble</option>
+            <option value="canvas">Canvas</option>
+            <option value="wood">Wood</option>
+            <option value="wood2">Wood 2</option>
+            <option value="wood3">Wood 3</option>
+            <option value="wood4">Wood 4</option>
+            <option value="maple">Maple</option>
+            <option value="maple2">Maple 2</option>
+            <option value="brown">Brown</option>
+            <option value="leather">Leather</option>
+            <option value="green">Green</option>
+            <option value="marble">Marble</option>
+            <option value="green-plastic">Green plastic</option>
+            <option value="grey">Grey</option>
+            <option value="metal">Metal</option>
+            <option value="olive">Olive</option>
+            <option value="newspaper">Newspaper</option>
+            <option value="purple">Purple</option>
+            <option value="purplediag">Purple diag</option>
+            <option value="pink">Pink</option>
+            <option value="ic">IC</option>
+            <option value="horsey">Horsey</option>
+
+        </select>
+        
+        </div>
+        <div>
+        <button id="save">Save</button>
+        </div>
+        
+        <div id="board"></div>
+        <div id="wr" class="piece"></div>
+        <div id="wn" class="piece"></div>
+        <div id="wb" class="piece"></div>
+        <div id="wq" class="piece"></div>
+        <div id="wk" class="piece"></div>
+        <div id="wb2" class="piece"></div>
+        <div id="wn2" class="piece"></div>
+        <div id="wr2" class="piece"></div>
+        <div id="wp1" class="piece"></div>
+        <div id="wp2" class="piece"></div>
+        <div id="wp3" class="piece"></div>
+        <div id="wp4" class="piece"></div>
+        <div id="wp5" class="piece"></div>
+        <div id="wp6" class="piece"></div>
+        <div id="wp7" class="piece"></div>
+        <div id="wp8" class="piece"></div>
+
+        <div id="bp1" class="piece"></div>
+        <div id="bp2" class="piece"></div>
+        <div id="bp3" class="piece"></div>
+        <div id="bp4" class="piece"></div>
+        <div id="bp5" class="piece"></div>
+        <div id="bp6" class="piece"></div>
+        <div id="bp7" class="piece"></div>
+        <div id="bp8" class="piece"></div>
+        <div id="br" class="piece"></div>
+        <div id="bn" class="piece"></div>
+        <div id="bb" class="piece"></div>
+        <div id="bq" class="piece"></div>
+        <div id="bk" class="piece"></div>
+        <div id="bb2" class="piece"></div>
+        <div id="bn2" class="piece"></div>
+        <div id="br2" class="piece"></div>
+
+
+    </div>
+
+    <script src="options.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+    "name": "LiTheme",
+    "version": "1.0",
+    "description": "Use lichess piece and board themes in chess.com",
+    "icons": {
+      "512": "lichess.png"
+    },
+    "options_page": "options.html",
+    "manifest_version": 3,
+    "action": {
+      "default_title": "Use lichess piece and board themes in chess.com"
+    },
+    "permissions": ["activeTab", "scripting", "tabs", "storage"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions": [
+      "https://www.chess.com/*"
+    ]
+  }
