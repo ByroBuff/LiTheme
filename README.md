@@ -4,6 +4,7 @@ The goal of this extension is to broaden the horizons of themes in chess.com as 
 ## Installation
 ```
 1. Download the repo as a zip or git clone it
+(zip link: )
 2. Go to chrome://extensions
 3. Enable developer mode in the top right
 4. Click 'load unpacked'
