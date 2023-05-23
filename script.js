@@ -53,22 +53,22 @@ if (window.location.href.includes("https://www.chess.com"))
 
         if (board == "none") return;
         svgs = ["blue", "brown", "green", "ic", "purple"]
-        if (!svgs.includes(board)) {
-
-            addStyle(`
-            .board, .fade-in-overlay {
-                background-image: url("https://raw.githubusercontent.com/lichess-org/lila/master/public/images/board/${board}.jpg") !important;
-            }
-            `);
-        } else {
+        pngs = ["pink-pyramid", "purple-diag", "newspaper", "green-plastic", "ncf-board"]
+        if (svgs.includes(board)) {
             addStyle(`
             .board, .fade-in-overlay {
                 background-image: url("https://raw.githubusercontent.com/lichess-org/lila/master/public/images/board/svg/${board}.svg") !important;
-            }
-            `);
+            }`);
+        } else if (pngs.includes(board)) {
+            addStyle(`
+            .board, .fade-in-overlay {
+                background-image: url("https://raw.githubusercontent.com/lichess-org/lila/master/public/images/board/${board}.png") !important;
+            }`);
+        } else {
+            addStyle(`
+            .board, .fade-in-overlay {
+                background-image: url("https://raw.githubusercontent.com/lichess-org/lila/master/public/images/board/${board}.jpg") !important;
+            }`);
         }
-
     }
   );
-
-  

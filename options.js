@@ -17,7 +17,15 @@ const saveOptions = () => {
 
 
 
-        board.style.backgroundImage = `url("https://raw.githubusercontent.com/lichess-org/lila/master/public/images/board/${boardTheme.value}.jpg")`;
+        svgs = ["blue", "brown", "green", "ic", "purple", "pink"]
+        pngs = ["pink-pyramid", "purple-diag", "newspaper", "green-plastic", "ncf-board"]
+        if (svgs.includes(boardTheme.value)) {   
+            board.style.backgroundImage = `url("https://raw.githubusercontent.com/lichess-org/lila/master/public/images/board/svg/${boardTheme.value}.svg")`;
+        } else if (pngs.includes(boardTheme.value)) {
+            board.style.backgroundImage = `url("https://raw.githubusercontent.com/lichess-org/lila/master/public/images/board/${boardTheme.value}.png")`;
+        } else {
+            board.style.backgroundImage = `url("https://raw.githubusercontent.com/lichess-org/lila/master/public/images/board/${boardTheme.value}.jpg")`;
+        }
 });
   };
 
@@ -35,11 +43,14 @@ const saveOptions = () => {
             document.getElementById(pieceName).style.backgroundImage = `url("https://raw.githubusercontent.com/lichess-org/lila/master/public/piece/${pieceTheme.value}/${pieceLichessNames[index]}.svg")`;
         });
 
-        svgs = ["blue", "brown", "green", "ic", "purple"]
-        if (!svgs.includes(items.boardTheme)) {   
-            document.getElementById('board').style.backgroundImage = `url("https://raw.githubusercontent.com/lichess-org/lila/master/public/images/board/${items.boardTheme}.jpg")`;
-        } else {
+        svgs = ["blue", "brown", "green", "ic", "purple", "pink"]
+        pngs = ["pink-pyramid", "purple-diag", "newspaper", "green-plastic", "ncf-board"]
+        if (svgs.includes(items.boardTheme)) {   
             document.getElementById('board').style.backgroundImage = `url("https://raw.githubusercontent.com/lichess-org/lila/master/public/images/board/svg/${items.boardTheme}.svg")`;
+        } else if (pngs.includes(items.boardTheme)) {
+            document.getElementById('board').style.backgroundImage = `url("https://raw.githubusercontent.com/lichess-org/lila/master/public/images/board/${items.boardTheme}.png")`;
+        } else {
+            document.getElementById('board').style.backgroundImage = `url("https://raw.githubusercontent.com/lichess-org/lila/master/public/images/board/${items.boardTheme}.jpg")`;
         }
       }
     );
