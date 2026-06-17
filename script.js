@@ -52,8 +52,8 @@ if (window.location.href.includes("https://www.chess.com"))
       `);
 
         if (board == "none") return;
-        svgs = ["blue", "brown", "green", "ic", "purple"]
-        pngs = ["pink-pyramid", "purple-diag", "newspaper", "green-plastic", "ncf-board"]
+        svgs = []
+        pngs = ["blue", "brown", "green", "ic", "purple", "pink-pyramid", "purple-diag", "newspaper", "green-plastic", "ncf-board"]
         if (svgs.includes(board)) {
             addStyle(`
             .board, .fade-in-overlay {
